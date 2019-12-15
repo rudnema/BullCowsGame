@@ -11,9 +11,14 @@ int main()
 {
 	PrintIntro();
 
+	// loop for the number of turns asking for guesses
+	constexpr int NUMBER_OF_TURNS = 5;
+	for (int count = 1; count <= NUMBER_OF_TURNS; count++)
+	{ 
 	GetGuessAndPrintBack();
-	
-
+	cout << endl;
+	}
+	cout << endl;
 	//delete
 	// get a guess from player
 	//cout << "Enter your guess: ";
@@ -21,8 +26,6 @@ int main()
 	// repeat the guess back to them
 	//cout << "Your guess was:" << Guess << endl;
 
-	cout << endl;
-	
 	// CZAS NA ODPOCZYNEK I PIZZE
 
 	return 0;
@@ -40,8 +43,9 @@ void PrintIntro() {
 	return;
 }
 // get a guess from player
-string GetGuessAndPrintBack() {
-	
+string GetGuessAndPrintBack()
+{
+	// get a guess from player
 	cout << "Enter your guess: ";
 	string Guess = "";
 	getline(cin, Guess);
