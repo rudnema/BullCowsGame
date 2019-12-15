@@ -23,6 +23,7 @@ int main()
 	
 	cout << endl;
 	
+	// CZAS NA ODPOCZYNEK I PIZZE
 
 	return 0;
 
