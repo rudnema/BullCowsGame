@@ -1,3 +1,1 @@
-﻿  main.cpp
-c:\users\amend\documents\bullcowsgame\section_02\bullcowsgame\main.cpp(42): warning C4101: "BCGame": lokalna zmienna, do której nie istnieje odwołanie
-  BullCowsGame.vcxproj -> C:\Users\amend\Documents\BullCowsGame\Section_02\Debug\BullCowsGame.exe
+﻿  BullCowsGame.vcxproj -> C:\Users\amend\Documents\BullCowsGame\Section_02\Debug\BullCowsGame.exe
