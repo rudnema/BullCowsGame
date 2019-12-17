@@ -64,20 +64,24 @@ void PlayGame()
 	//TODO change drom FOR to WHILE loop once we are validating ties
 	constexpr int32 NUMBER_OF_TURNS = 5; // inne miejsce !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	for (int32 count = 1; count <= NUMBER_OF_TURNS; count++) {
-		FText Guess = GetGuess(); // TODO make loop checking valid
+		FText Guess = GetGuess(); 
+
+		EGuessStatus Status = BCGame.CheckGuessValidity(Guess);
 
 		// Submit valid guess to the game, and recieve counts
 		FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
 		// Print number of bulls and cows
 		std::cout << "Bulls = " << BullCowCount.Bulls;
 		std::cout << ". Cows = " << BullCowCount.Cows << std::endl;
-
-std::cout << std::endl;
+		std::cout << std::endl;
 	}
 	// TODO summarise  game
 }
 
-FText GetGuess() 
+
+
+
+FText GetGuess()  // TODO change to GetValidGuess
 {
 	int32 CurrentTry = BCGame.GetCurrentTry();
 
