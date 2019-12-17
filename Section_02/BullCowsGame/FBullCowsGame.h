@@ -19,21 +19,18 @@ public:
 
 	int32 GetMaxTries() const;
 	int32 GetCurrentTry() const;
+	int32 GetHiddenWordLength() const;
+
+
 	bool IsGameWon() const;
-	
+	bool CheckGuessValidity(FString) const;// TODO make a more rich return value
+
 	void Reset(); //todo make a more rich return value
-	bool CheckGuessValidity(FString); // TODO make a more rich return value
-
-
-	// counts bulls % cows, and increasses try # assuming valid guess
 	FBullCowCount SubmitGuess(FString);
 	
+	
 
-
-
-
-
-	//ignorowaæ
+	//ban
 
 private:
 	// see constructor for initialisation
