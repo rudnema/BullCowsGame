@@ -16,7 +16,7 @@ int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); 
 void FBullCowGame::Reset()
 {
 	constexpr int32 MAX_TRIES = 8;
-	const FString HIDDEN_WORD = ""; //isogram
+	const FString HIDDEN_WORD = "donkey"; //isogram
 	
 	MyMaxTries = MAX_TRIES;
 	MyHiddenWord = HIDDEN_WORD;
@@ -31,9 +31,9 @@ bool FBullCowGame::IsGameWon() const
 	return false;
 }
 
-bool FBullCowGame::CheckGuessValidity(FString) const
+EwordStatus FBullCowGame::CheckGuessValidity(FString) const
 {
-	return false;
+	return EwordStatus::OK; // TODO make actual error
 }
 
 // recieves a VALID guess, incriments turn, and returns count
