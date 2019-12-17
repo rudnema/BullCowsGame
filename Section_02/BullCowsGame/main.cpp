@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "FBullCowsGames.h"
+#include "FBullCowsGame.h"
 
 void PrintIntro();
 void PlayGame();
@@ -12,6 +12,8 @@ FBullCowGame BCGame; //instantiate a new game
 // the enetry point of our application
 int main()
 {
+	std::cout << BCGame.GetCurrentTry();
+
 	bool bPlayAgain = false;
 	do {
 	PrintIntro();
@@ -41,9 +43,9 @@ void PrintIntro()
 
 void PlayGame()
 {
-	
+	BCGame.Reset();
 	int MaxTries = BCGame.GetMaxTries();  //copy
-	std::cout << MaxTries << std::endl; //??? ró¿nica
+	//std::cout << MaxTries << std::endl; //??? ró¿nica
 
 	//loop for the number of turns asking for guesses
 	constexpr int NUMBER_OF_TURNS = 5;
