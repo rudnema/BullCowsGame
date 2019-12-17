@@ -6,6 +6,7 @@ For game logic see the the FBullCowGame class.
 */
 
 
+#pragma once
 
 #include <iostream>
 #include <string>
