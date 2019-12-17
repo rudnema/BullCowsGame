@@ -25,7 +25,7 @@ FBullCowGame BCGame; //instantiate a new game
 // the enetry point of our application
 int main()
 {
-	std::cout << BCGame.GetCurrentTry();
+	std::cout << BCGame.GetCurrentTry(); //pokazuje próby
 
 	bool bPlayAgain = false;
 	do {
@@ -47,7 +47,29 @@ int main()
 //introduse the game 
 void PrintIntro() 
 {
+
 	//constexpr int WORD_LENGTH = 9; deleted
+	std::cout << "MM                   MM                                     \n";
+	std::cout << "MMM+                8MM                                     \n";
+	std::cout << "MMMMMM            :MMM                        MM,     ZMM   \n";
+	std::cout << "ZMMM+MMMM+       MMMM                         MMMO  MMMMM   \n";
+	std::cout << "   MMM  MMMMMMMMMMMN                            MMMMMMMZ    \n";
+	std::cout << "    MMMMM   MMMMMMMMM                        ZMMMZMZ, MMMMMM\n";
+	std::cout << "      $MMD  MMM    MMMMMMM         MMMMMMMMMMMMM         MMM\n";
+	std::cout << "777MMMMDI               I7MMM~  7MMMIIIIIII+                \n";
+	std::cout << "MMM?                       MMM +MM                          \n";
+	std::cout << "                           ZMM +M+                          \n";
+	std::cout << "        B U L L S          MMM  MM            C O W S       \n";
+	std::cout << "                     MMMMMMMO    MMMMMMM                    \n";
+	std::cout << "               ZMMMMMMMM               MMMMM                \n";
+	std::cout << "             MMMM                         MMMMM             \n";
+	std::cout << "            MMM                               MMMMM         \n";
+	std::cout << "           MMO                                   MM,        \n";
+	std::cout << "\nWelcome to Bulls & Cows\n";
+	std::cout << "Isogram: a word that does not have any repeating letters in it.\n";
+	std::cout << "  \"planet\" is an isogram, while \"pollen\" is not.\n";
+	std::cout << "  Note: for our purposes, isograms have been selected from\n  the 5000 most common English words." << std::endl;
+	return;
 	std::cout << "\n\nWelcome to Bulls and Cows, a fun word game.\n";
 	std::cout << "Can you guess the " << BCGame.GetHiddenWordLength();
 	std::cout << " Letter isogram I'm thinking of?\n";
@@ -91,7 +113,8 @@ FText GetValidGuess()
 	do {
 		//get a guess from the player
 		int32 CurrentTry = BCGame.GetCurrentTry();
-		std::cout << "Try " << CurrentTry << ". Enter your guess: ";
+		std::cout << "Try " << CurrentTry << " of " << BCGame.GetMaxTries();
+		std::cout << ". Enter your guess: ";
 		std::getline(std::cin, Guess);
 
 		// get a guess from the player
@@ -99,19 +122,19 @@ FText GetValidGuess()
 		switch (Status)
 		{
 		case EGuessStatus::Wrong_Length:
-			std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " latter word.\n";
+			std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " latter word.\n\n";
 			break;
 		case EGuessStatus::Not_Isogram:
-			std::cout << "Please enter a word without repeating letters.\n";
+			std::cout << "Please enter a word without repeating letters.\n\n";
 			break;
 		case EGuessStatus::Not_Lowercase:
-			std::cout << "Please enter all lowercase letters.\n";
+			std::cout << "Please enter all lowercase letters.\n\n";
 			break;
 		default:
 			// assume the guess is valid
 			break;
 		}
-		std::cout << std::endl;
+		//std::cout << std::endl;
 	} while (Status != EGuessStatus::OK); //keep looping until we get no errors
 	return Guess;
 }
