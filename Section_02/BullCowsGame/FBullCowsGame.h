@@ -43,7 +43,7 @@ public:
 private:
 	// see constructor for initialisation
 	int32 MyCurrentTry;
-	int32 MyMaxTries;
+	//int32 MyMaxTries; deleted
 	FString MyHiddenWord;
 	bool bGameIsWon;
 

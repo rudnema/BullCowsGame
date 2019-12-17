@@ -49,11 +49,11 @@ void PrintIntro()
 {
 
 	//constexpr int WORD_LENGTH = 9; deleted
-	std::cout << "MM                   MM                                     \n";
-	std::cout << "MMM+                8MM                                     \n";
-	std::cout << "MMMMMM            :MMM                        MM,     ZMM   \n";
-	std::cout << "ZMMM+MMMM+       MMMM                         MMMO  MMMMM   \n";
-	std::cout << "   MMM  MMMMMMMMMMMN                            MMMMMMMZ    \n";
+	std::cout << "MM                   MM       /  \\/  \\                    \n";
+	std::cout << "MMM+                8MM       \\      /                     \n";
+	std::cout << "MMMMMM            :MMM         \\    /        MM,     ZMM   \n";
+	std::cout << "ZMMM+MMMM+       MMMM           \\  /         MMMO  MMMMM   \n";
+	std::cout << "   MMM  MMMMMMMMMMMN             \\/            MMMMMMMZ    \n";
 	std::cout << "    MMMMM   MMMMMMMMM                        ZMMMZMZ, MMMMMM\n";
 	std::cout << "      $MMD  MMM    MMMMMMM         MMMMMMMMMMMMM         MMM\n";
 	std::cout << "777MMMMDI               I7MMM~  7MMMIIIIIII+                \n";
