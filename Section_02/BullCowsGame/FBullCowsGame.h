@@ -13,6 +13,7 @@ public:
 	
 	void Reset(); //todo make a more rich return value
 	bool CheckGuessValidity(std::string); // TODO make a more rich return value
+	// provide a method for counting bulls % cows, and increasing try #
 	
 	
 
@@ -20,7 +21,7 @@ public:
 
 
 
-	//:> ignoruj to
+	//ignorowaæ
 
 private:
 	// see constructor for initialisation
