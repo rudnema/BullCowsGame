@@ -49,31 +49,31 @@ int main()
 void PrintIntro() 
 {
 
-	//constexpr int WORD_LENGTH = 9; deleted
-	std::cout << "MM                   MM       /  \\/  \\                    \n";
-	std::cout << "MMM+                8MM       \\      /                     \n";
-	std::cout << "MMMMMM            :MMM         \\    /        MM,     ZMM   \n";
-	std::cout << "ZMMM+MMMM+       MMMM           \\  /         MMMO  MMMMM   \n";
-	std::cout << "   MMM  MMMMMMMMMMMN             \\/            MMMMMMMZ    \n";
-	std::cout << "    MMMMM   MMMMMMMMM                        ZMMMZMZ, MMMMMM\n";
-	std::cout << "      $MMD  MMM    MMMMMMM         MMMMMMMMMMMMM         MMM\n";
-	std::cout << "777MMMMDI               I7MMM~  7MMMIIIIIII+                \n";
-	std::cout << "MMM?                       MMM +MM                          \n";
-	std::cout << "                           ZMM +M+                          \n";
-	std::cout << "        B U L L S          MMM  MM            C O W S       \n";
-	std::cout << "                     MMMMMMMO    MMMMMMM                    \n";
-	std::cout << "               ZMMMMMMMM               MMMMM                \n";
-	std::cout << "             MMMM                         MMMMM             \n";
-	std::cout << "            MMM                               MMMMM         \n";
-	std::cout << "           MMO                                   MM,        \n";
-	std::cout << "\nWelcome to Bulls & Cows\n";
-	std::cout << "Isogram: a word that does not have any repeating letters in it.\n";
-	std::cout << "  \"planet\" is an isogram, while \"pollen\" is not.\n";
-	std::cout << "  Note: for our purposes, isograms have been selected from\n  the 5000 most common English words." << std::endl;
-	return;
-	std::cout << "\n\nWelcome to Bulls and Cows, a fun word game.\n";
-	std::cout << "Can you guess the " << BCGame.GetHiddenWordLength();
-	std::cout << " Letter isogram I'm thinking of?\n";
+	std::cout << R"(
+                 ___====-_  _-====___
+           _--^^^#####//      \\#####^^^--_
+        _-^##########// (    ) \\##########^-_
+       -############//  |\^^/|  \\############-
+     _/############//   (@::@)   \\############\_
+    /#############((     \\//     ))#############\
+   -###############\\    (oo)    //###############-
+  -#################\\  / VV \  //#################-
+ -###################\\/      \//###################-
+_#/|##########/\######(   /\   )######/\##########|\#_
+|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+`  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+   `   `  `      `   / | |  | | \   '      '  '   '
+                    (  | |  | |  )
+                   __\ | |  | | /__
+                  (vvv(VVV)(VVV)vvv)
+)";
+
+
+
+	std::cout << "\n\nWelcome to SPELL CRAFT game, a fun world of Might & Magic.\n";
+	std::cout << "A great dangers await you on every path!";
+	std::cout << " Can you guess the " << BCGame.GetHiddenWordLength();
+	std::cout << " letter spell to defeat the terrifying dragon?\n";
 	std::cout << std::endl;
 	return;
 }
